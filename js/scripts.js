@@ -11,6 +11,9 @@ Account.prototype.withdraw = function(money){
 }
 
 var userAccount = new Account()
+var showBalance = function(account){
+  $("#balance").html(account.balance)
+}
 
 $(document).ready(function(){
   console.log(userAccount);
@@ -20,6 +23,7 @@ $(document).ready(function(){
     var userDeposit = parseInt($("#initialDeposit").val());
     userAccount = new Account(userName, userDeposit);
     console.log(userAccount);
+    showBalance(userAccount)
   })
   $(".addFunds").submit(function(event){
     event.preventDefault();
@@ -27,13 +31,17 @@ $(document).ready(function(){
     var deposit = parseInt($("#addFunds").val());
     userAccount.addMoney(deposit);
     console.log(userAccount)
+    $("input#addFunds").val("");
+    showBalance(userAccount)
   });
 $(".removeFunds").submit(function(event){
-    var withdrawal = parseInt($("#withdrawalAmmount").val());
-    console.log(deposit, withdrawal);
-    console.log(test);
-    userAccount.withdraw(withdrawal);
+  event.preventDefault();
+    userAccount = userAccount
+    var withdraw = parseInt($("#withdrawalAmmount").val());
+    userAccount.withdraw(withdraw)
     console.log(userAccount)
+    $("input#withdrawalAmmount").val("");
+    showBalance(userAccount)
   })
 
 
