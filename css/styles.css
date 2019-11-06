@@ -1,0 +1,21 @@
+#moneyManagement {
+  display: none;
+
+}
+
+.totalMoney {
+  display: none;
+}
+
+body {
+  background-image: radial-gradient(#60d17e, #d1cf60);
+}
+
+.jumbotron {
+  text-align: center;
+  font-family: monospace;
+}
+
+h2 {
+  font-size: 60px;
+}

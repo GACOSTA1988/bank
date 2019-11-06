@@ -9,7 +9,15 @@
   </head>
   <body>
   <div class="container">
+    <div class="jumbotron">
+      <h2>The Bank</h2>
 
+    </div>
+<div class="card" id="accountCreation">
+  <div class="card-header">
+<h3>Create Your Account</h3>
+  </div>
+  <div class="card-body">
     <div class="accountCreation">
       <form class="account">
         <label for="accountName">Name:</label>
@@ -19,17 +27,28 @@
         <button type="submit" name="button">Submit</button>
       </form>
     </div>
+  </div>
+</div>
+<div class="card" id="moneyManagement">
+  <div class="card-header">
+    <h3>Account Management</h3>
+  </div>
+  <div class="card-body">
     <div class="moneyManagement">
       <form class="money">
         <label for="addFunds">Deposit Amount:</label>
         <input type="number" id="addFunds">
         <label for="withdrawalAmmount">Withdrawal Amount:</label>
         <input type="number" id="withdrawalAmmount">
-        <button type="submit" name="button">Submit</button>
+        <button type="submit" name="money">Submit</button>
       </form>
     </div>
+  </div>
+
+</div>
     <div class="totalMoney">
-      <h3 id="balance"></h3>
+      <h3> Your Balance is:</h3>
+      <h4 id="balance"></h4>
 
     </div>
   </div>
